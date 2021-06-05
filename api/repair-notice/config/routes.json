@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/repair-notices",
+      "handler": "repair-notice.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/repair-notices/count",
+      "handler": "repair-notice.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/repair-notices/:id",
+      "handler": "repair-notice.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/repair-notices",
+      "handler": "repair-notice.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/repair-notices/:id",
+      "handler": "repair-notice.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/repair-notices/:id",
+      "handler": "repair-notice.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

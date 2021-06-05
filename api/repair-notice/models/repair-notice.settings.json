@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "repair_notices",
+  "info": {
+    "name": "Repair_Notice",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "school": {
+      "model": "school"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "notice",
+        "process",
+        "done"
+      ],
+      "default": "notice",
+      "required": true
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "repair_type": {
+      "type": "enumeration",
+      "enum": [
+        "DLTV",
+        "ICT"
+      ],
+      "required": true
+    },
+    "doc_url": {
+      "type": "string"
+    },
+    "book_date": {
+      "type": "datetime"
+    }
+  }
+}
