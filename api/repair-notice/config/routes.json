@@ -10,8 +10,24 @@
     },
     {
       "method": "GET",
+      "path": "/repair-notices/me",
+      "handler": "repair-notice.findme",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/repair-notices/count",
       "handler": "repair-notice.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/line/:id",
+      "handler": "repair-notice.line",
       "config": {
         "policies": []
       }
